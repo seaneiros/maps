@@ -1,0 +1,66 @@
+@import './mixins';
+
+.simple-list {
+
+  &__button {
+    position: absolute;
+    display: block;
+    .rect(24px);
+    background-image: url('simpleListIcons.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &--add {
+      top: 5px;
+      right: 5px;
+      background-position: -39px -39px;
+    }
+
+    &--clear {
+      top: 5px;
+      left: 5px;
+      background-position: -5px -5px;
+    }
+
+    &--edit {
+      top: 8px;
+      left: 5px;
+      background-position: -39px -5px;
+    }
+
+    &--delete {
+      top: 8px;
+      right: 5px;
+      background-position: -5px -39px;
+    }
+
+  }
+
+  &__content {
+    .rect(100%);
+    overflow-y: auto;
+  }
+
+  &__item {
+
+    position: relative;
+    padding: 5px 30px;
+    height: 30px;
+    margin: 7px 2px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+    transition: background-color .2s ease;
+
+    &--selected {
+      background-color: bisque;
+    }
+
+    &__title {
+      line-height: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
+
+}
